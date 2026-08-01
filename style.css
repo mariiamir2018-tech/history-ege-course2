@@ -98,3 +98,34 @@ main > section[id^="module"]{width:100%;min-width:0}
 .document-analysis p{margin:7px 0 0}
 .document-card small{display:block;margin-top:12px;color:var(--muted)}
 @media(max-width:900px){.photo-figure{grid-template-columns:1fr}.photo-figure .media-open{min-height:240px;border-right:0;border-bottom:1px solid var(--line)}.photo-figure figcaption{padding:18px}.document-card{padding:20px}}
+
+/* 8.2 — карты, документы и фотографии: каждый материал на полной ширине */
+#module82 .visuals{
+  grid-template-columns:minmax(0,1fr);
+  margin:20px 0;
+  width:100%;
+}
+#module82 .visuals > *{
+  min-width:0;
+  width:100%;
+}
+#module82 .map-figure,
+#module82 .photo-figure,
+#module82 .document-card{
+  grid-column:1 / -1;
+  width:100%;
+  max-width:100%;
+}
+#module82 .map-reading,
+#module82 .map-ege{
+  background:var(--soft);
+  color:var(--text);
+}
+#module82 .map-reading p,
+#module82 .map-ege p{
+  overflow-wrap:anywhere;
+}
+@media(max-width:900px){
+  #module82 .visuals{display:block}
+  #module82 .visuals > *{margin:14px 0}
+}
