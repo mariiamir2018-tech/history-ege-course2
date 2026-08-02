@@ -211,3 +211,61 @@ main > section[id^="module"]{width:100%;min-width:0}
     border-bottom: 1px solid var(--line) !important;
   }
 }
+
+/* VERIFIED 8.2 STACKED LAYOUT — cards cannot collapse into narrow columns */
+#module82 #content82,
+#module82 .topic,
+#module82 .body,
+#module82 .visuals {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+#module82 .visuals {
+  display: block !important;
+  margin: 20px 0 !important;
+}
+#module82 .visuals > .map-figure,
+#module82 .visuals > .photo-figure,
+#module82 .visuals > .document-card {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin: 20px 0 !important;
+  overflow: hidden !important;
+}
+#module82 .map-figure .media-open,
+#module82 .photo-figure .media-open {
+  display: flex !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 280px !important;
+  padding: 16px !important;
+  border-right: 0 !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+#module82 .map-figure img,
+#module82 .photo-figure img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 680px !important;
+  object-fit: contain !important;
+}
+#module82 .map-figure figcaption,
+#module82 .photo-figure figcaption {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 24px !important;
+  color: var(--text) !important;
+}
+#module82 .map-figure figcaption > *,
+#module82 .photo-figure figcaption > *,
+#module82 .document-card > * {
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+}
