@@ -129,3 +129,85 @@ main > section[id^="module"]{width:100%;min-width:0}
   #module82 .visuals{display:block}
   #module82 .visuals > *{margin:14px 0}
 }
+
+
+/* FINAL 8.2 LAYOUT HOTFIX — 2026-08-01 */
+#module82,
+#module82 .body,
+#module82 #content82,
+#module82 .topic,
+#module82 .visuals {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+#module82 .visuals {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 20px !important;
+  width: 100% !important;
+  margin: 20px 0 !important;
+}
+#module82 .visuals > figure,
+#module82 .visuals > .document-card {
+  flex: 0 0 auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+#module82 .map-figure,
+#module82 .photo-figure {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr) !important;
+  overflow: hidden !important;
+}
+#module82 .map-figure .media-open,
+#module82 .photo-figure .media-open {
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 360px !important;
+}
+#module82 .map-figure img,
+#module82 .photo-figure img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 720px !important;
+  object-fit: contain !important;
+}
+#module82 .map-figure figcaption,
+#module82 .photo-figure figcaption {
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 24px !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+#module82 .map-reading,
+#module82 .map-ege {
+  display: block !important;
+  width: 100% !important;
+  background: var(--soft) !important;
+  color: var(--text) !important;
+  writing-mode: horizontal-tb !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+}
+#module82 .map-reading *,
+#module82 .map-ege *,
+#module82 figcaption * {
+  writing-mode: horizontal-tb !important;
+  max-width: 100% !important;
+}
+@media (max-width: 900px) {
+  #module82 .map-figure,
+  #module82 .photo-figure {
+    grid-template-columns: 1fr !important;
+  }
+  #module82 .map-figure .media-open,
+  #module82 .photo-figure .media-open {
+    min-height: 240px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--line) !important;
+  }
+}
