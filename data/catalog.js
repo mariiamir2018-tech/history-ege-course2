@@ -9,7 +9,7 @@ const CATALOG = [
   {id:'8', title:'Великая Отечественная война (1941–1945)', source:'ЕГЭ 2026', status:'active', children:[
     {id:'8.1', title:'Первый период войны (июнь 1941 — осень 1942 г.)', status:'ready'},
     {id:'8.2', title:'Коренной перелом (осень 1942 — 1943 г.)', status:'ready'},
-    {id:'8.3', title:'Человек и война: единство фронта и тыла', status:'planned'},
+    {id:'8.3', title:'Человек и война: единство фронта и тыла', status:'ready'},
     {id:'8.4', title:'Победа СССР. Окончание Второй мировой войны', status:'planned'}
   ]},
   {id:'9', title:'СССР в 1945–1991 гг.', source:'ЕГЭ 2026', status:'active', children:[
