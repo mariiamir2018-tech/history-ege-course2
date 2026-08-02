@@ -92,11 +92,3 @@ h1,h2,h3{font-family:Georgia,serif;line-height:1.16}
 .completion83 .primary.completed{background:#397b55;border-color:#397b55}
 .completion-status{min-height:24px;margin-top:12px;font-weight:700;color:#397b55}
 @media(max-width:640px){.person-ege-rich{grid-template-columns:70px minmax(0,1fr)}.person-monogram,.person-media{width:70px}.person-content{padding:15px 14px 15px 0}.quick-grid{grid-template-columns:1fr}}
-
-/* v0.6.8b — visible 8.4 documents section */
-#summary84 .documents-collection{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
-#summary84 .documents-collection .document-card{width:100%;margin:0}
-#summary84 .document-significance{margin-top:12px;padding:14px;border-radius:12px;background:var(--soft,#f5efe5)}
-#summary84 .document-check{margin-top:12px;padding:12px 14px;border:1px solid var(--line,#ded4c6);border-radius:12px}
-#summary84 .document-check summary{cursor:pointer;font-weight:700}
-#summary84 .document-answer{margin-top:10px;padding-top:10px;border-top:1px solid var(--line,#ded4c6)}

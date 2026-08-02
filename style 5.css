@@ -1,0 +1,271 @@
+:root{--bg:#f5f1e9;--panel:#fffdf8;--text:#202020;--muted:#746f67;--line:#ddd4c5;--accent:#8e2f2b;--accent2:#c7a65a;--soft:#f0e7d7;--shadow:0 12px 35px #3b2d1812}html[data-theme=dark]{--bg:#181817;--panel:#242321;--text:#f3eee5;--muted:#b9b1a6;--line:#443f38;--soft:#302d28;--shadow:none}*{box-sizing:border-box}body{margin:0;font:16px/1.58 Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}button,input,textarea{font:inherit}.topbar{height:68px;position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:16px;padding:0 22px;background:var(--panel);border-bottom:1px solid var(--line)}#menuBtn{display:none}.brand{display:flex;flex-direction:column;min-width:220px}.brand b{font-family:Georgia,serif;font-size:21px}.brand span{font-size:12px;color:var(--muted)}.top-actions{margin-left:auto;display:flex;gap:8px}.top-actions input{width:min(380px,38vw);padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text)}button{border:1px solid var(--line);background:var(--panel);color:var(--text);padding:9px 12px;border-radius:10px;cursor:pointer}.layout{display:grid;grid-template-columns:290px 1fr;min-height:calc(100vh - 68px)}aside{position:sticky;top:68px;height:calc(100vh - 68px);overflow:auto;background:var(--panel);border-right:1px solid var(--line);padding:20px 14px}.course-progress{padding:12px;margin-bottom:12px}.label{display:flex;justify-content:space-between;font-size:13px}.track{height:8px;background:var(--line);border-radius:9px;overflow:hidden;margin-top:8px}.track i{display:block;height:100%;width:0;background:var(--accent);transition:.3s}.catalog-group>button,.children button{width:100%;display:grid;grid-template-columns:38px 1fr auto;align-items:center;text-align:left;border:0;background:transparent;padding:10px 8px}.catalog-group button:hover{background:var(--soft)}.catalog-group span{font-weight:800;color:var(--accent)}.catalog-group em{font-style:normal;font-size:10px;color:var(--muted)}.children{margin-left:18px;border-left:1px solid var(--line)}.children button{font-size:13px;grid-template-columns:42px 1fr auto}.children .ready{background:var(--soft)}.source-note{font-size:11px;color:var(--muted);padding:16px;border-top:1px solid var(--line);margin-top:16px}main{min-width:0;padding:34px clamp(20px,5vw,76px) 80px}.hero{display:grid;grid-template-columns:1.4fr .7fr;gap:30px;align-items:center;min-height:430px;padding:54px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,var(--panel),var(--soft));box-shadow:var(--shadow)}h1,h2,h3{font-family:Georgia,serif;line-height:1.16}.hero h1{font-size:clamp(38px,5vw,68px);margin:12px 0}.hero p{font-size:19px;color:var(--muted);max-width:760px}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:800;color:var(--accent)}.primary{background:var(--accent);color:white;border-color:var(--accent);padding:13px 18px}.hero-card{min-height:260px;border-radius:22px;background:var(--accent);color:white;padding:28px;display:flex;flex-direction:column;justify-content:center}.hero-card strong{font:80px/1 Georgia}.hero-card span{font-size:22px}.hero-card small{margin-top:15px;opacity:.8}.module-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}.module-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;min-height:180px}.module-card>span{font:32px Georgia;color:var(--accent)}.module-card h3{margin:8px 0}.module-card p{color:var(--muted);font-size:13px}.module-card b{font-size:12px}.module-card.planned{opacity:.66}.module-head{padding-bottom:24px}.module-head h1{font-size:48px;margin:10px 0}.module-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.progress-wrap{flex:1;min-width:260px}.topic-nav{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.topic-nav a{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;color:var(--text);text-decoration:none}.topic{background:var(--panel);border:1px solid var(--line);border-radius:18px;margin:14px 0;box-shadow:var(--shadow);overflow:hidden}.topic summary{display:grid;grid-template-columns:auto auto 1fr;gap:14px;align-items:center;padding:20px;cursor:pointer}.topic summary h2{margin:0;font-size:24px}.topic summary small{color:var(--muted)}.check{width:20px;height:20px}.num{font:bold 24px Georgia;color:var(--accent)}.body{padding:0 24px 28px}.code,.box,.ege,.question{border:1px solid var(--line);background:var(--soft);border-radius:14px;padding:16px;margin:16px 0}.code h4,.box h4{margin:0 0 8px}.source{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px}.text p{font-size:17px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.visuals{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.visuals figure{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}.visuals img{width:100%;height:220px;object-fit:cover;display:block}.visuals figcaption{padding:10px;font-size:13px;color:var(--muted)}.ege{border-left:5px solid var(--accent2)}.question textarea{width:100%;min-height:90px;margin-top:8px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--text)}.hidden,.search-hidden{display:none!important}@media(max-width:900px){#menuBtn{display:block}.layout{grid-template-columns:1fr}aside{position:fixed;z-index:30;left:-310px;width:290px;transition:.25s;box-shadow:0 0 50px #0005}aside.open{left:0}.hero{grid-template-columns:1fr;padding:28px}.grid{grid-template-columns:1fr}.top-actions input{width:42vw}.brand{min-width:auto}main{padding:24px 16px 60px}}@media(max-width:560px){.brand span{display:none}.top-actions input{display:none}.hero h1{font-size:38px}.module-head h1{font-size:36px}.topic summary{grid-template-columns:auto auto 1fr;padding:14px}.topic summary h2{font-size:19px}.body{padding:0 14px 20px}}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.secondary{border:1px solid var(--line);background:var(--card);color:var(--text);padding:12px 18px;border-radius:12px;font-weight:700}.learning-overview,.final-block{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;margin:0 0 20px;box-shadow:0 10px 30px rgba(32,25,20,.05)}.learning-overview>p,.test-intro{color:var(--muted);max-width:850px}.timeline{display:flex;overflow-x:auto;gap:0;padding:24px 4px 8px;scroll-snap-type:x mandatory}.timeline div{min-width:190px;position:relative;padding:28px 18px 12px 0;border-top:3px solid var(--accent);scroll-snap-align:start}.timeline div:before{content:"";position:absolute;top:-8px;left:0;width:13px;height:13px;border-radius:50%;background:var(--accent)}.timeline time{display:block;font-weight:800;color:var(--accent);margin-bottom:7px}.timeline span{display:block;line-height:1.35}.significance{margin:16px 0;padding:18px;border-left:5px solid #7b5c98;background:rgba(123,92,152,.08);border-radius:12px}.significance p{margin:6px 0 0}.remember-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.remember-grid>div{padding:16px;border-radius:14px;background:var(--soft);border:1px solid var(--line);font-weight:650}.terms-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.terms-grid details{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--soft)}.terms-grid summary{cursor:pointer;font-weight:800}.terms-grid p{margin:10px 0 0;color:var(--muted)}.test-block fieldset{border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0}.test-block legend{font-weight:800;padding:0 8px}.test-block label{display:flex;gap:10px;align-items:flex-start;padding:9px;border-radius:10px;cursor:pointer}.test-block label:hover{background:var(--soft)}.test-feedback{margin-top:10px;font-weight:700}.test-block fieldset.ok{border-color:#4d9b6d;background:rgba(77,155,109,.07)}.test-block fieldset.bad{border-color:#bc5c5c;background:rgba(188,92,92,.07)}.test-result{font-size:1.1rem;font-weight:800;margin-top:14px}
+
+/* 9.3: textbook illustrations are displayed without destructive cropping */
+#module93 .visuals img{height:240px;object-fit:contain;background:#eee8dc;padding:8px}
+#module93 .visuals figcaption::after{content:" · Источник: учебник истории России, 11 класс";font-weight:600;color:var(--accent)}
+#module93 .learning-overview,#module93 .final-block,#module92 .learning-overview,#module92 .final-block{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;margin:16px 0;box-shadow:var(--shadow)}
+.timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:16px}.timeline>div{border-left:4px solid var(--accent);background:var(--soft);padding:12px;border-radius:8px}.timeline time{display:block;font-weight:800;color:var(--accent)}
+.remember-grid,.terms-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}.remember-grid>div,.terms-grid details{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:13px}.terms-grid summary{font-weight:800;cursor:pointer}.test-block fieldset{border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}.test-block legend{font-weight:800}.test-block label{display:block;padding:8px;border-radius:8px}.test-block label:hover{background:var(--soft)}.test-feedback{margin-top:8px;font-weight:600}.test-block fieldset.ok{border-color:#43885d}.test-block fieldset.bad{border-color:#a8453e}.test-result{font-size:20px;font-weight:800;margin-top:14px}
+
+/* v0.4.1 layout fix: all lesson modules must live inside the main grid column. */
+main > section[id^="module"]{width:100%;min-width:0}
+.module-head h1{overflow-wrap:anywhere}
+@media (max-width:720px){.module-head h1{font-size:clamp(34px,10vw,48px)}}
+
+/* Module 9.4: preserve textbook image proportions and native resolution. */
+#module94 .visuals{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:flex-start;
+  gap:18px;
+  margin:22px 0;
+}
+#module94 .visuals figure{
+  width:min(100%,760px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:var(--soft);
+}
+#module94 .visuals img{
+  width:auto;
+  max-width:100%;
+  height:auto;
+  max-height:560px;
+  object-fit:contain;
+  display:block;
+  margin:0 auto;
+  background:#eee8dc;
+}
+#module94 .visuals figcaption{
+  width:100%;
+  background:var(--panel);
+}
+#module94 .visuals figcaption::after{
+  content:" · Источник: учебник истории России, 11 класс";
+  font-weight:600;
+  color:var(--accent);
+}
+@media(max-width:560px){
+  #module94 .visuals figure{width:100%}
+  #module94 .visuals img{max-height:none}
+}
+
+/* 8.1 — персоналии ЕГЭ */
+.persons-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
+.person-ege{background:var(--card,#fff);border:1px solid rgba(101,76,56,.18);border-radius:18px;padding:20px;box-shadow:0 8px 24px rgba(73,52,35,.06)}
+.person-ege h3{margin:0 0 12px;font-size:1.08rem;line-height:1.3;color:var(--text,#2d2925)}
+.person-ege p{margin:8px 0;line-height:1.55}
+.person-ege-note{padding-top:10px;border-top:1px solid rgba(101,76,56,.12);color:var(--muted,#665f58)}
+@media(max-width:760px){.persons-grid{grid-template-columns:1fr}.person-ege{padding:17px}}
+
+/* 8.1 — этап 2: карты */
+.map-figure{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);overflow:hidden;background:var(--surface,#fff);border:1px solid var(--line,#ded5c7);border-radius:18px}
+.map-figure .media-open{position:relative;display:flex;align-items:center;justify-content:center;min-height:420px;padding:0;border:0;border-right:1px solid var(--line,#ded5c7);background:#eee8dc;cursor:zoom-in;overflow:hidden}
+.map-figure .media-open img{display:block;width:100%;height:auto;max-height:760px;object-fit:contain;background:#eee8dc}
+.map-figure .media-open span{position:absolute;right:14px;bottom:14px;padding:8px 12px;border-radius:999px;background:rgba(25,22,19,.82);color:white;font-size:.82rem;font-weight:700}
+.map-figure figcaption{padding:24px;display:flex;flex-direction:column;gap:14px}
+.map-figure figcaption h4{margin:0;font-family:Georgia,serif;font-size:1.45rem;line-height:1.15}
+.map-figure figcaption p{margin:0;line-height:1.55}
+.map-reading,.map-ege{padding:16px;border-radius:14px;background:var(--muted,#f2eadc)}
+.map-reading b,.map-ege b{display:block;margin-bottom:6px;color:var(--accent,#8e2d28);text-transform:uppercase;letter-spacing:.06em;font-size:.78rem}
+.map-ege{border-left:4px solid var(--accent,#8e2d28)}
+.media-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:28px;background:rgba(15,13,11,.92)}
+.media-modal.open{display:flex}
+.media-modal img{display:block;max-width:96vw;max-height:92vh;object-fit:contain;box-shadow:0 20px 70px rgba(0,0,0,.45)}
+.media-close{position:fixed;right:20px;top:18px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.4);color:#fff;font-size:2rem;cursor:pointer}
+.modal-open{overflow:hidden}
+@media(max-width:900px){.map-figure{grid-template-columns:1fr}.map-figure .media-open{min-height:260px;border-right:0;border-bottom:1px solid var(--line,#ded5c7)}.map-figure figcaption{padding:18px}.map-figure figcaption h4{font-size:1.25rem}}
+
+/* 8.1 — этап 3: архивные фотографии и исторические источники */
+#module81 .visuals{grid-template-columns:1fr;margin:20px 0}
+.photo-figure{display:grid;grid-template-columns:minmax(300px,.9fr) minmax(0,1.1fr);overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:18px}
+.photo-figure .media-open{position:relative;display:flex;align-items:center;justify-content:center;min-height:320px;padding:16px;border:0;border-right:1px solid var(--line);background:#eee8dc;cursor:zoom-in;overflow:hidden}
+.photo-figure .media-open img{display:block;width:100%;height:auto;max-height:520px;object-fit:contain;background:#eee8dc}
+.photo-figure .media-open span{position:absolute;right:14px;bottom:14px;padding:8px 12px;border-radius:999px;background:rgba(25,22,19,.82);color:#fff;font-size:.82rem;font-weight:700}
+.photo-figure figcaption{padding:24px;display:flex;flex-direction:column;gap:14px}
+.photo-figure figcaption h4{margin:0;font-family:Georgia,serif;font-size:1.45rem;line-height:1.15;color:var(--text)}
+.photo-figure figcaption>p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.55}
+.document-card{padding:28px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,var(--soft),var(--panel));box-shadow:var(--shadow)}
+.document-label{margin-bottom:10px;color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.document-card h3{margin:0 0 6px;font-size:1.65rem}
+.document-card time{color:var(--muted);font-weight:700}
+.document-card blockquote{margin:20px 0;padding:18px 22px;border-left:5px solid var(--accent);background:var(--panel);font:italic 1.3rem/1.55 Georgia,serif}
+.document-analysis{margin:14px 0;padding:16px;border-radius:14px;background:var(--panel);border:1px solid var(--line)}
+.document-analysis b{color:var(--accent);text-transform:uppercase;letter-spacing:.06em;font-size:.78rem}
+.document-analysis p{margin:7px 0 0}
+.document-card small{display:block;margin-top:12px;color:var(--muted)}
+@media(max-width:900px){.photo-figure{grid-template-columns:1fr}.photo-figure .media-open{min-height:240px;border-right:0;border-bottom:1px solid var(--line)}.photo-figure figcaption{padding:18px}.document-card{padding:20px}}
+
+/* 8.2 — карты, документы и фотографии: каждый материал на полной ширине */
+#module82 .visuals{
+  grid-template-columns:minmax(0,1fr);
+  margin:20px 0;
+  width:100%;
+}
+#module82 .visuals > *{
+  min-width:0;
+  width:100%;
+}
+#module82 .map-figure,
+#module82 .photo-figure,
+#module82 .document-card{
+  grid-column:1 / -1;
+  width:100%;
+  max-width:100%;
+}
+#module82 .map-reading,
+#module82 .map-ege{
+  background:var(--soft);
+  color:var(--text);
+}
+#module82 .map-reading p,
+#module82 .map-ege p{
+  overflow-wrap:anywhere;
+}
+@media(max-width:900px){
+  #module82 .visuals{display:block}
+  #module82 .visuals > *{margin:14px 0}
+}
+
+
+/* FINAL 8.2 LAYOUT HOTFIX — 2026-08-01 */
+#module82,
+#module82 .body,
+#module82 #content82,
+#module82 .topic,
+#module82 .visuals {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+#module82 .visuals {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 20px !important;
+  width: 100% !important;
+  margin: 20px 0 !important;
+}
+#module82 .visuals > figure,
+#module82 .visuals > .document-card {
+  flex: 0 0 auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+#module82 .map-figure,
+#module82 .photo-figure {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr) !important;
+  overflow: hidden !important;
+}
+#module82 .map-figure .media-open,
+#module82 .photo-figure .media-open {
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 360px !important;
+}
+#module82 .map-figure img,
+#module82 .photo-figure img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 720px !important;
+  object-fit: contain !important;
+}
+#module82 .map-figure figcaption,
+#module82 .photo-figure figcaption {
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 24px !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+#module82 .map-reading,
+#module82 .map-ege {
+  display: block !important;
+  width: 100% !important;
+  background: var(--soft) !important;
+  color: var(--text) !important;
+  writing-mode: horizontal-tb !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+}
+#module82 .map-reading *,
+#module82 .map-ege *,
+#module82 figcaption * {
+  writing-mode: horizontal-tb !important;
+  max-width: 100% !important;
+}
+@media (max-width: 900px) {
+  #module82 .map-figure,
+  #module82 .photo-figure {
+    grid-template-columns: 1fr !important;
+  }
+  #module82 .map-figure .media-open,
+  #module82 .photo-figure .media-open {
+    min-height: 240px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--line) !important;
+  }
+}
+
+/* VERIFIED 8.2 STACKED LAYOUT — cards cannot collapse into narrow columns */
+#module82 #content82,
+#module82 .topic,
+#module82 .body,
+#module82 .visuals {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+#module82 .visuals {
+  display: block !important;
+  margin: 20px 0 !important;
+}
+#module82 .visuals > .map-figure,
+#module82 .visuals > .photo-figure,
+#module82 .visuals > .document-card {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin: 20px 0 !important;
+  overflow: hidden !important;
+}
+#module82 .map-figure .media-open,
+#module82 .photo-figure .media-open {
+  display: flex !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 280px !important;
+  padding: 16px !important;
+  border-right: 0 !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+#module82 .map-figure img,
+#module82 .photo-figure img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 680px !important;
+  object-fit: contain !important;
+}
+#module82 .map-figure figcaption,
+#module82 .photo-figure figcaption {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 24px !important;
+  color: var(--text) !important;
+}
+#module82 .map-figure figcaption > *,
+#module82 .photo-figure figcaption > *,
+#module82 .document-card > * {
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+}
