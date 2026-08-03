@@ -81,6 +81,7 @@ function showHome(){
   });
 
 
+  }
 
 $('#start81').onclick=()=>showModule('8.1');
 $('#start82').onclick=()=>showModule('8.2');
