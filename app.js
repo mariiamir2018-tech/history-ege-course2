@@ -80,7 +80,16 @@ function showHome(){
     behavior:'smooth'
   });
 }
-$('#start81').onclick=()=>showModule('8.1');$('#start82').onclick=()=>showModule('8.2');$('#start83').onclick=()=>showModule('8.3');$('#start84').onclick=()=>showModule('8.4');$('#start91').onclick=()=>showModule('9.1');$('#start92').onclick=()=>showModule('9.2');$('#start93').onclick=()=>showModule('9.3');$('#start94').onclick=()=>showModule('9.4');$ $('#start101').onclick=()=>showModule('10.1');('#backHome').onclick=showHome;$$('.backHome').forEach(b=>b.onclick=showHome);
+
+
+$('#start81').onclick=()=>showModule('8.1');
+$('#start82').onclick=()=>showModule('8.2');
+$('#start83').onclick=()=>showModule('8.3');
+$('#start84').onclick=()=>showModule('8.4');
+$('#start91').onclick=()=>showModule('9.1');
+$('#start92').onclick=()=>showModule('9.2');
+$('#start93').onclick=()=>showModule('9.3');
+$('#start94').onclick=()=>showModule('9.4');
 catalog.onclick=e=>{const b=e.target.closest('button[data-module]');if(!b)return;if(['8.1','8.2','8.3','8.4','9.1','9.2','9.3','9.4','10.1'].includes(b.dataset.module))showModule(b.dataset.module)};
 document.addEventListener('change',e=>{if(e.target.classList.contains('check')){saved[e.target.dataset.id]=e.target.checked;localStorage.setItem('historyEgeProgress',JSON.stringify(saved));update()}});document.addEventListener('click',e=>{if(e.target.classList.contains('check'))e.stopPropagation()});
 $('#expand').onclick=()=>$$('#content .topic').forEach(x=>x.open=true);$('#collapse').onclick=()=>$$('#content .topic').forEach(x=>x.open=false);$$('.expand').forEach(b=>b.onclick=()=>$$('#'+b.dataset.target+' .topic').forEach(x=>x.open=true));$$('.collapse').forEach(b=>b.onclick=()=>$$('#'+b.dataset.target+' .topic').forEach(x=>x.open=false));
