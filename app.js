@@ -97,7 +97,9 @@ document.addEventListener('change',e=>{if(e.target.classList.contains('check')){
 $('#expand').onclick=()=>$$('#content .topic').forEach(x=>x.open=true);$('#collapse').onclick=()=>$$('#content .topic').forEach(x=>x.open=false);$$('.expand').forEach(b=>b.onclick=()=>$$('#'+b.dataset.target+' .topic').forEach(x=>x.open=true));$$('.collapse').forEach(b=>b.onclick=()=>$$('#'+b.dataset.target+' .topic').forEach(x=>x.open=false));
 $('#search').oninput=()=>{const q=$('#search').value.toLowerCase().trim();if(q.length>1)showModule(activeModule);const container=activeModule==='8.1'?'#content81':activeModule==='8.2'?'#content82':activeModule==='8.3'?'#content83':activeModule==='8.4'?'#content84':activeModule==='9.4'?'#content94':activeModule==='9.3'?'#content93':activeModule==='9.2'?'#content92':
 activeModule==='10.1'?'#content101':
-'#content',course=activeModule==='8.1'?COURSE81:activeModule==='8.2'?COURSE82:activeModule==='8.3'?COURSE83:activeModule==='8.4'?COURSE84:activeModule==='9.4'?COURSE94:activeModule==='9.3'?COURSE93:activeModule==='9.2'?COURSE92:COURSE;$$(container+' .topic').forEach((el,i)=>el.classList.toggle('search-hidden',q.length>1&&!JSON.stringify(course.topics[i]).toLowerCase().includes(q)))};
+'#content',course=activeModule==='8.1'?COURSE81:activeModule==='8.2'?COURSE82:activeModule==='8.3'?COURSE83:activeModule==='8.4'?COURSE84:activeModule==='9.4'?COURSE94:activeModule==='9.3'?COURSE93:activeModule==='9.2'?COURSE92:
+activeModule==='10.1'?COURSE101:
+COURSE;$$(container+' .topic').forEach((el,i)=>el.classList.toggle('search-hidden',q.length>1&&!JSON.stringify(course.topics[i]).toLowerCase().includes(q)))};
 $('#theme').onclick=()=>{document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';localStorage.setItem('historyTheme',document.documentElement.dataset.theme)};document.documentElement.dataset.theme=localStorage.getItem('historyTheme')||'light';$('#menuBtn').onclick=()=>$('#sidebar').classList.toggle('open');update();
 $$('.backHome').forEach(btn=>{
   btn.onclick=()=>showHome();
