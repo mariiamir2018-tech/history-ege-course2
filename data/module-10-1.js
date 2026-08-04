@@ -1,4 +1,4 @@
-const COURSE = {
+const COURSE10 = {
   title: "10.1 Становление новой России (1992–1999 гг.)",
   subtitle: "Политическое развитие, экономические реформы и социальные изменения России в 1990-е годы.",
   topics: [
@@ -79,4 +79,4 @@ const COURSE = {
   ]
 };
 
-window.COURSE101 = COURSE101;
+window.COURSE10 = COURSE10;
