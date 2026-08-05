@@ -66,7 +66,23 @@ ${COURSE101.persons.map(x=>`
 
 </section>`;
 
+</section>`;
+
+const m=$('#summary101');
+
+m.innerHTML+=`
+<section class="final-block">
+<h2>Частые ошибки ЕГЭ</h2>
+
+<div class="remember-grid">
+${COURSE101.mistakes.map(x=>`<div>${x}</div>`).join('')}
+</div>
+
+</section>`;
+
 }
+
+function render83Extras(){}
 
 function render83Extras(){
   const o=$('#overview83');
