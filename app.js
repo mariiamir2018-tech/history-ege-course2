@@ -35,40 +35,9 @@ o.innerHTML=`
 ${COURSE101.timeline.map(x=>`<div><span>${x}</span></div>`).join('')}
 </div>
 
-${COURSE101.terms.map(x=>`<details><summary>${x[0]}</summary><p>${x[1]}</p></details>`).join('')}
-</div>
 
 </section>`;
 
-const test=$('#summary101');
-
-test.innerHTML+=`
-<section class="final-block test-block">
-<h2>Итоговый тест</h2>
-
-<p class="test-intro">
-Проверьте знания по теме «Становление новой России (1990-е гг.)».
-</p>
-
-<div id="test101">
-${COURSE101.tests.map((t,i)=>`
-<fieldset data-correct="${t.correct}" data-explain="${t.explain}">
-<legend>${i+1}. ${t.q}</legend>
-
-${t.a.map((a,j)=>`
-<label>
-<input type="radio" name="q101_${i}" value="${j}">
-<span>${a}</span>
-</label>
-`).join('')}
-
-<div class="test-feedback"></div>
-</fieldset>
-`).join('')}
-
-</div>
-
-</section>`;
 const p=$('#summary101');
 
 p.innerHTML+=`
