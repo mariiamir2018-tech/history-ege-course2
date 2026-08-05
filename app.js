@@ -124,7 +124,19 @@ ${COURSE101.terms.map(x=>`<details><summary>${x[0]}</summary><p>${x[1]}</p></det
 </div>
 
 </section>`;
+const q=$('#summary101');
 
+q.innerHTML+=`
+<section class="final-block quick101">
+<span class="eyebrow">Быстрое повторение</span>
+
+<h2>ЕГЭ за 60 секунд</h2>
+
+<div class="quick-grid">
+${COURSE101.quick.map(x=>`<div>${x}</div>`).join('')}
+</div>
+
+</section>`;
 const test=$('#summary101');
 
 test.innerHTML+=`
