@@ -152,7 +152,45 @@ ${t.a.map((a,j)=>`
 `).join('')}
 </div>
 
+<button id="checkTest101" class="primary">Проверить тест</button>
+
+<div id="testResult101" class="test-result"></div>
+
 </section>`;
+
+$('#checkTest101').onclick=()=>{
+let correct=0;
+let answered=0;
+
+$$('#test101 fieldset').forEach(f=>{
+const c=+f.dataset.correct;
+const sel=f.querySelector('input:checked');
+const fb=f.querySelector('.test-feedback');
+
+f.classList.remove('ok','bad');
+
+if(sel){
+answered++;
+
+if(+sel.value===c){
+correct++;
+f.classList.add('ok');
+fb.textContent='Верно. '+f.dataset.explain;
+}else{
+f.classList.add('bad');
+fb.textContent='Неверно. '+f.dataset.explain;
+}
+
+}else{
+fb.textContent='Выберите вариант ответа.';
+}
+
+});
+
+$('#testResult101').textContent=
+`Результат: ${correct} из ${COURSE101.tests.length}. Отвечено: ${answered}.`;
+
+};
 }
 
 function render83Extras(){}
