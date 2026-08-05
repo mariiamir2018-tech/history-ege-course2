@@ -30,6 +30,16 @@ h1,h2,h3{font-family:Georgia,serif;line-height:1.16}
 .module-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}.module-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;min-height:180px}.module-card>span{font:32px Georgia;color:var(--accent)}.module-card h3{margin:8px 0}.module-card p{color:var(--muted);font-size:13px}.module-card b{font-size:12px}.module-card.planned{opacity:.66}
 
 .module-head{padding-bottom:24px}.module-head h1{font-size:48px;margin:10px 0;overflow-wrap:anywhere}.module-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.progress-wrap{flex:1;min-width:260px}.topic-nav{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.topic-nav a{
+  .topic-number{
+background:#f6efe3;
+font-weight:600;
+border-radius:50%;
+transition:.2s;
+}
+
+.topic-number:hover{
+transform:translateY(-2px);
+}
 width:34px;
 height:34px;
 display:grid;
