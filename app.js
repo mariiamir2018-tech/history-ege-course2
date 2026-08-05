@@ -66,7 +66,6 @@ ${COURSE101.persons.map(x=>`
 
 </section>`;
 
-</section>`;
 
 const m=$('#summary101');
 
