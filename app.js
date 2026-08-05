@@ -123,7 +123,35 @@ ${COURSE101.mistakes.map(x=>`<div>${x}</div>`).join('')}
 </div>
 
 </section>`;
+const test=$('#summary101');
 
+test.innerHTML+=`
+<section class="final-block test-block">
+<h2>Итоговый тест</h2>
+
+<p class="test-intro">
+Проверьте знания по теме «Становление новой России (1990-е гг.)».
+</p>
+
+<div id="test101">
+${COURSE101.tests.map((t,i)=>`
+<fieldset data-correct="${t.correct}" data-explain="${t.explain}">
+<legend>${i+1}. ${t.q}</legend>
+
+${t.a.map((a,j)=>`
+<label>
+<input type="radio" name="q101_${i}" value="${j}">
+<span>${a}</span>
+</label>
+`).join('')}
+
+<div class="test-feedback"></div>
+</fieldset>
+`).join('')}
+
+</div>
+
+</section>`;
 }
 
 function render83Extras(){}
