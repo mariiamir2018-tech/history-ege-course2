@@ -19,6 +19,24 @@ function render81Extras(){const o=$('#overview81');o.innerHTML=`<section class="
 const s=$('#summary81');s.innerHTML=`<section class="final-block"><h2>Что обязательно запомнить для ЕГЭ</h2><div class="remember-grid">${COURSE81.remember.map(x=>`<div>${x}</div>`).join('')}</div></section><section class="final-block"><h2>Персоналии ЕГЭ</h2><p class="test-intro">Военачальники, государственные деятели и герои, которых важно связывать с событиями первого периода войны.</p><div class="persons-grid">${COURSE81.persons.map(p=>`<article class="person-ege"><h3>${p.name}</h3><p><b>Роль:</b> ${p.role}</p><p class="person-ege-note"><b>Для ЕГЭ:</b> ${p.ege}</p></article>`).join('')}</div></section><section class="final-block"><h2>Термины</h2><div class="terms-grid">${COURSE81.terms.map(x=>`<details><summary>${x[0]}</summary><p>${x[1]}</p></details>`).join('')}</div></section><section class="final-block"><h2>Частые ошибки</h2><div class="remember-grid"><div>Не объясняйте поражения 1941 г. только внезапностью нападения — нужен комплекс причин.</div><div>Не путайте оборонительный этап Московской битвы с неудачной Ржевско-Вяземской операцией 1942 г.</div><div>Контрнаступление под Сталинградом относится уже к теме 8.2.</div><div>Приказ № 227 не следует представлять единственной причиной стойкости Красной армии.</div><div>План «Ост» — не военная операция, а колониальная программа нацистов.</div></div></section><section class="final-block test-block"><h2>Проверочный тест</h2><p class="test-intro">30 заданий по первому периоду войны, включая вопросы на персоналии. После проверки появится объяснение каждого ответа.</p><div id="test81">${COURSE81.tests.map((t,i)=>`<fieldset data-correct="${t.correct}" data-explain="${t.explain.replace(/"/g,'&quot;')}"><legend>${i+1}. ${t.q}</legend>${t.a.map((a,j)=>`<label><input type="radio" name="q81_${i}" value="${j}"><span>${a}</span></label>`).join('')}<div class="test-feedback"></div></fieldset>`).join('')}</div><button id="checkTest81" class="primary">Проверить тест</button><div id="testResult81" class="test-result"></div></section>`;$('#checkTest81').onclick=()=>{let correct=0,answered=0;$$('#test81 fieldset').forEach(f=>{const c=+f.dataset.correct,sel=f.querySelector('input:checked'),fb=f.querySelector('.test-feedback');f.classList.remove('ok','bad');if(sel){answered++;if(+sel.value===c){correct++;f.classList.add('ok');fb.textContent='Верно. '+f.dataset.explain}else{f.classList.add('bad');fb.textContent='Неверно. '+f.dataset.explain}}else fb.textContent='Выберите вариант ответа.'});const percent=Math.round(correct/COURSE81.tests.length*100);$('#testResult81').textContent=`Результат: ${correct} из ${COURSE81.tests.length} (${percent}%). Отвечено: ${answered}.`}}
 render81Extras(); render82Extras();
 
+
+
+
+function render101Extras(){
+const o=$('#overview101');
+
+o.innerHTML=`
+<section class="learning-overview">
+<h2>Маршрут по теме</h2>
+<p>Распад СССР → реформы 1990-х → политический кризис 1993 года → Конституция РФ → Чечня → кризис 1998 года → смена власти в 1999 году.</p>
+
+<div class="timeline">
+${COURSE101.timeline.map(x=>`<div><span>${x}</span></div>`).join('')}
+</div>
+
+</section>`;
+}
+
 function render83Extras(){
   const o=$('#overview83');
   o.innerHTML=`<section class="learning-overview"><h2>Маршрут по теме</h2><p>Мобилизация управления → эвакуация и военная экономика → труд и повседневность → духовная жизнь → партизанское движение → значение единства фронта и тыла.</p><div class="timeline">${COURSE83.timeline.map(x=>`<div><time>${x[0]}</time><span>${x[1]}</span></div>`).join('')}</div></section>`;
