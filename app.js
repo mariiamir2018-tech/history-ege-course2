@@ -47,7 +47,17 @@ ${COURSE101.terms.map(x=>`<div>${x}</div>`).join('')}
 </div>
 
 </section>`;
+const t=$('#terms101');
 
+t.innerHTML=`
+<section class="final-block">
+<h2>Термины ЕГЭ</h2>
+
+<div class="terms-grid">
+${COURSE101.terms.map(x=>`<div>${x}</div>`).join('')}
+</div>
+
+</section>`;
 }
 
 function render83Extras(){
