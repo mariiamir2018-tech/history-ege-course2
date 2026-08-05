@@ -43,7 +43,7 @@ t.innerHTML=`
 <h2>Термины ЕГЭ</h2>
 
 <div class="terms-grid">
-${COURSE101.terms.map(x=>`<div>${x}</div>`).join('')}
+${COURSE101.terms.map(x=>`<details><summary>${x[0]}</summary><p>${x[1]}</p></details>`).join('')}
 </div>
 
 </section>`;
