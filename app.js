@@ -258,7 +258,8 @@ function showHome(){
     '#module92',
     '#module93',
     '#module94',
-    '#module101'
+    '#module101',
+    '#module102',
   ].forEach(id=>{
     $(id)?.classList.add('hidden');
   });
