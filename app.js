@@ -49,6 +49,21 @@ ${COURSE102.remember.map(x=>`<div>${x}</div>`).join('')}
 <div class="terms-grid">
 ${COURSE102.terms.map(x=>`<details><summary>${x[0]}</summary><p>${x[1]}</p></details>`).join('')}
 </div>
+</section>
+
+<section class="final-block">
+<h2>Персоналии ЕГЭ</h2>
+
+<div class="persons-grid">
+${COURSE102.persons.map(x=>`
+<article class="person-ege">
+<h3>${x.name}</h3>
+<p><b>Роль:</b> ${x.role}</p>
+<p class="person-ege-note"><b>Для ЕГЭ:</b> ${x.ege}</p>
+</article>
+`).join('')}
+</div>
+
 </section>`;
 }
 function render102Extras(){
