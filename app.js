@@ -164,7 +164,7 @@ $('#testResult102').textContent=
 `Результат: ${correct} из ${COURSE102.tests.length}. Отвечено: ${answered}.`;
 
 };
-}
+
 
 function render101Extras(){
 const o=$('#overview101');
