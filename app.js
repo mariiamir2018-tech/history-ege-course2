@@ -25,43 +25,81 @@ render81Extras(); render82Extras();
 
 
 function render102Extras(){
+
 const o=$('#overview102');
+
 o.innerHTML=`
 <section class="learning-overview">
 <h2>Маршрут по теме</h2>
-<p>Изучите основные этапы развития России в XXI веке: укрепление государства, экономическое развитие, социальная политика и внешняя политика.</p>
+
 <div class="timeline">
-${COURSE102.timeline.map(x=>`<div><time>${x[0]}</time><span>${x[1]}</span></div>`).join('')}
+${COURSE102.timeline.map(x=>`
+<div>
+<time>${x[0]}</time>
+<span>${x[1]}</span>
 </div>
-</section>`;
+`).join('')}
+</div>
+
+</section>
+`;
+
 
 const s=$('#summary102');
+
 s.innerHTML=`
+
 <section class="final-block">
+
 <h2>Что запомнить для ЕГЭ</h2>
+
 <div class="remember-grid">
-${COURSE102.remember.map(x=>`<div>${x}</div>`).join('')}
+${COURSE102.remember.map(x=>`
+<div>${x}</div>
+`).join('')}
 </div>
+
 </section>
 
+
 <section class="final-block">
+
 <h2>Термины</h2>
+
 <div class="terms-grid">
-${COURSE102.terms.map(x=>`<details><summary>${x[0]}</summary><p>${x[1]}</p></details>`).join('')}
+
+${COURSE102.terms.map(x=>`
+<div>
+<b>${x[0]}</b>
+<p>${x[1]}</p>
 </div>
+`).join('')}
+
+</div>
+
 </section>
 
+
 <section class="final-block">
+
 <h2>Персоналии ЕГЭ</h2>
 
 <div class="persons-grid">
-${COURSE102.persons.map(x=>`
+
+${COURSE102.persons.map(p=>`
+
 <article class="person-ege">
-<h3>${x.name}</h3>
-<p><b>Роль:</b> ${x.role}</p>
-<p class="person-ege-note"><b>Для ЕГЭ:</b> ${x.ege}</p>
+
+<h3>${p.name}</h3>
+
+<p><b>Роль:</b> ${p.role}</p>
+
+<p><b>Для ЕГЭ:</b> ${p.ege}</p>
+
 </article>
+
 `).join('')}
+
 </div>
 
 </section>
@@ -71,19 +109,15 @@ ${COURSE102.persons.map(x=>`
 
 <h2>Проверочный тест</h2>
 
-<p class="test-intro">
-20 заданий по теме «Россия в XXI в.: вызовы времени и задачи модернизации».
-</p>
-
 <div id="test102">
 
 ${COURSE102.tests.map((t,i)=>`
 
 <fieldset 
 data-correct="${t.correct}" 
-data-explain="${t.explain.replace(/"/g,'&quot;')}">
+data-explain="${t.explain}">
 
-<legend>${i+1}. ${t.q}</legend>
+<p>${i+1}. ${t.q}</p>
 
 ${t.a.map((a,j)=>`
 
@@ -92,7 +126,7 @@ ${t.a.map((a,j)=>`
 type="radio" 
 name="q102_${i}" 
 value="${j}">
-<span>${a}</span>
+${a}
 </label>
 
 `).join('')}
@@ -113,8 +147,11 @@ value="${j}">
 
 <div id="testResult102" class="test-result"></div>
 
-
 </section>
+
+`;
+
+
 $('#checkTest102').onclick=()=>{
 
 let correct=0;
@@ -124,38 +161,37 @@ let answered=0;
 $$('#test102 fieldset').forEach(f=>{
 
 const c=+f.dataset.correct;
+
 const sel=f.querySelector('input:checked');
+
 const fb=f.querySelector('.test-feedback');
-
-
-f.classList.remove('ok','bad');
 
 
 if(sel){
 
 answered++;
 
-
 if(+sel.value===c){
 
 correct++;
+
 f.classList.add('ok');
+
 fb.textContent='Верно. '+f.dataset.explain;
 
 }else{
 
 f.classList.add('bad');
+
 fb.textContent='Неверно. '+f.dataset.explain;
 
 }
-
 
 }else{
 
 fb.textContent='Выберите вариант ответа.';
 
 }
-
 
 });
 
@@ -166,6 +202,7 @@ $('#testResult102').textContent=
 };
 
 
+}
 function render101Extras(){
 const o=$('#overview101');
 
