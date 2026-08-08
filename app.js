@@ -64,7 +64,106 @@ ${COURSE102.persons.map(x=>`
 `).join('')}
 </div>
 
-</section>`;
+</section>
+
+
+<section class="final-block test-block">
+
+<h2>Проверочный тест</h2>
+
+<p class="test-intro">
+20 заданий по теме «Россия в XXI в.: вызовы времени и задачи модернизации».
+</p>
+
+<div id="test102">
+
+${COURSE102.tests.map((t,i)=>`
+
+<fieldset 
+data-correct="${t.correct}" 
+data-explain="${t.explain.replace(/"/g,'&quot;')}">
+
+<legend>${i+1}. ${t.q}</legend>
+
+${t.a.map((a,j)=>`
+
+<label>
+<input 
+type="radio" 
+name="q102_${i}" 
+value="${j}">
+<span>${a}</span>
+</label>
+
+`).join('')}
+
+<div class="test-feedback"></div>
+
+</fieldset>
+
+`).join('')}
+
+</div>
+
+
+<button id="checkTest102" class="primary">
+Проверить тест
+</button>
+
+
+<div id="testResult102" class="test-result"></div>
+
+
+</section>
+$('#checkTest102').onclick=()=>{
+
+let correct=0;
+let answered=0;
+
+
+$$('#test102 fieldset').forEach(f=>{
+
+const c=+f.dataset.correct;
+const sel=f.querySelector('input:checked');
+const fb=f.querySelector('.test-feedback');
+
+
+f.classList.remove('ok','bad');
+
+
+if(sel){
+
+answered++;
+
+
+if(+sel.value===c){
+
+correct++;
+f.classList.add('ok');
+fb.textContent='Верно. '+f.dataset.explain;
+
+}else{
+
+f.classList.add('bad');
+fb.textContent='Неверно. '+f.dataset.explain;
+
+}
+
+
+}else{
+
+fb.textContent='Выберите вариант ответа.';
+
+}
+
+
+});
+
+
+$('#testResult102').textContent=
+`Результат: ${correct} из ${COURSE102.tests.length}. Отвечено: ${answered}.`;
+
+};
 }
 
 function render101Extras(){
