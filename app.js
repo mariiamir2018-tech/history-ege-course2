@@ -69,16 +69,24 @@ ${COURSE102.remember.map(x=>`
 <div class="terms-grid">
 
 ${COURSE102.terms.map(x=>`
-<div>
-<b>${x[0]}</b>
-<p>${x[1]}</p>
-</div>
+
+<details class="term-card">
+
+<summary>
+${x[0]}
+</summary>
+
+<p>
+${x[1]}
+</p>
+
+</details>
+
 `).join('')}
 
 </div>
 
 </section>
-
 
 <section class="final-block">
 
