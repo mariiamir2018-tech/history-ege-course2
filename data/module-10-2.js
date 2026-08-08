@@ -870,9 +870,7 @@ question:
 }
 ],
 
-tests:[
-...
-]
+tests:[]
 
 };
 
